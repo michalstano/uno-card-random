@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "uno-card-ranom": {
+    "uno-card-random": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/uno-card-ranom",
+            "outputPath": "dist/uno-card-random",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "uno-card-ranom:build"
+            "browserTarget": "uno-card-random:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "uno-card-ranom:build:production"
+              "browserTarget": "uno-card-random:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "uno-card-ranom:build"
+            "browserTarget": "uno-card-random:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "uno-card-ranom:serve"
+            "devServerTarget": "uno-card-random:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "uno-card-ranom:serve:production"
+              "devServerTarget": "uno-card-random:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "uno-card-ranom"
+  "defaultProject": "uno-card-random"
 }
