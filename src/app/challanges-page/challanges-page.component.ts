@@ -25,6 +25,19 @@ export class ChallangesPageComponent implements OnInit {
   }
 
   @HostListener('click') generateRandomNumber(): void {
-    this.number = Math.floor(Math.random() * this.challenges.length) + 1;
+    if (this.number === 0) {
+      this.number = this.getRandomNumber();
+    } else {
+      let generatedNumber;
+      do {
+        generatedNumber = this.getRandomNumber();
+      } while (generatedNumber === this.number);
+
+      this.number = generatedNumber;
+    }
+  }
+
+  private getRandomNumber(): number {
+    return Math.floor(Math.random() * this.challenges.length) + 1;
   }
 }
